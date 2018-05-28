@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+
+  //var arr = ["张飞", "关羽", "赵云", "马超"];
+  //  for (var i = 0; i < arr.length; i++) {
+  //    console.log(arr[i]);
+  //  }
+
+  //forEach:遍历数组的
+
+  //参数就是一个function，forEach会为每一个元素都执行一次function
+
+  //参数1：element：数组中的元素
+  //参数2：index: 数组中的下标
+  //参数3：array: 遍历的这个数组
+  //  arr.forEach(function (e, i, a) {
+  //    console.log(e, i, a);
+  //  });
+
+  //练习：计算数组中所有数的和
+  //  var arr = [11, 22, 33, 44];
+  //  var num = 0;
+  //  arr.forEach(function (e) {
+  //    num += e;
+  //  });
+  //  console.log(num);
+
+
+
+
+
+  //map: 映射
+  //作用和forEach一样，也是会给每一个元素都执行一遍function
+  //map会返回一个新的数组，数组里的值就是每一个function的返回值
+  //  var arr = [1,2,3,4,5];
+  //  //得到一个新的数组，新数组的值是原来的 平方  [1,4,9,16,25]
+  //  var newArr = arr.map(function (e) {
+  //    return e * e;
+  //  });
+  //  console.log(newArr);
+
+
+
+  //filter 过滤
+  //和map有点像， 也会返回一个数组
+  //只有当这个函数返回true了，那么这个元素就会被保留，如果返回false了，那么这个元素就会丢掉
+  //  var arr = [3000, 5000, 1500, 30000, 40000, 500];
+    //  //只保留工资低于5000的
+    //  var newArr = arr.filter(function (e) {
+    //      return e > 5000;
+    //  });
+    //  console.log(newArr);
+
+  //  var arr = [1, "abc", 3, "ee", true, false];
+  //  var newArr = arr.filter(function (e) {
+  //    return typeof e === 'number';
+  //  });
+  //  console.log(newArr);
+  //  console.log(arr);
+
+
+  //some
+  //同样会给每一个元素都执行一次function
+  //some也有返回值，返回的是true或者false
+  // 如果所有的函数都返回false，才会返回false
+  // 只要其中一个函数，返回了true，整个some的结果就是true
+
+    //遍历数组，判断数组是否包含奇数，[2,4,6,8,10,9]
+  //  var arr = [2,4,6,8,10,12];
+  //  var result = arr.some(function (e) {
+  //    if(e % 2 == 1) {
+  //      return true;
+  //    }else {
+  //      return false;
+  //    }
+  //  });
+  //  console.log(result);
+
+
+  //every
+  //要求所有的function都返回了true，结果就是true
+  //只要有一个返回false，结果就是false
+
+  //这些成绩是否都及格了
+  var arr = [82, 65, 66, 99, 88, 100];
+  var result = arr.every(function (e) {
+    return e >= 60;
+  });
+
+  console.log(result);
+
+</script>
+
+</body>
+</html>
